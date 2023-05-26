@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cont{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .q{
+            display: block;
+            margin-bottom: 10px;
+        }
+        .btn{
+            margin-top: 10px;
+            height: 20px;
+            width: 100px;
+        }
+        .str{
+            min-height: 1.2rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="cont">
+        <h1 class="q">R U A GRONK</h1>
+        <div class="str"> </div>
+        <button class="btn">Check</button>
+    </div>
+    
+    <script> 
+        const strE = document.querySelector('.str');
+        const btnE = document.querySelector('.btn');
+
+        btnE.addEventListener('click', function(){
+            const randomNumber = Math.floor(Math.random() * 2) + 1;
+            randomNumber === 1 ? strE.textContent = 'Yes you are' : strE.textContent = 'honestly yes also'
+        })
+
+    </script>   
+</body>
+</html>
